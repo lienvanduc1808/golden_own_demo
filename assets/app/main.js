@@ -213,7 +213,7 @@ const app = {
                     _this.handleCount(id, count, countElement, cartItems);
                 }
                 else {
-                    //Xoa phan tu trong store va an di
+                 
                     _this.deleteItem(id, cartItems, element, count);
                 }
             }
@@ -241,6 +241,7 @@ const app = {
     },
 
     getEmptyCart : function() {
+
         cartElement.innerHTML =  `<div id="cart-empty">
                                         Your cart is empty
                                     </div>`; 
@@ -266,14 +267,18 @@ const app = {
             element.offsetParent.children[index].classList.add('fade-out');
         };
         _this.getTotalProduct();
-        //Xoa hien thi item
+       
         setTimeout(function() {
             element.offsetParent.removeChild(element.offsetParent.children[index]);
             if(newCart.length == 0) {
+              
                 _this.getEmptyCart(); 
+                
+                
             }
         }, 1000)
         _this.renderProducts();
+        _this.renderCards();
         
     },
 

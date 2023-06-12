@@ -292,6 +292,11 @@
     border-radius: 100%;
 }
 
+#cart-empty{
+   margin: 40px;
+   position: relative;
+}
+
 
 
 
